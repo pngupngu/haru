@@ -1,0 +1,35 @@
+out
+/.tmp
+/tmp
+.cache
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+packages/*/dist
+
+# misc
+.DS_Store
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# build output
+*.js
+*.d.ts
+*.d.ts.map
+!types.d.ts
+.nyc_output
+
+packages/core/rstream
+packages/core/utils
+packages/devcards/components
+
+packages/*/build
+packages/*/node_modules

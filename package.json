@@ -1,0 +1,60 @@
+{
+  "name": "haru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "stwind <stwindfy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf .cache build out dist",
+    "prep": "yarn clean && mkdir -p out",
+    "build": "yarn prep && parcel build index.html -d out --no-source-maps --no-cache --experimental-scope-hoisting --detailed-report --public-url ./",
+    "start": "yarn prep && parcel index.html -p 8080 --open -d out",
+    "deploy": "./deploy.sh"
+  },
+  "browserslist": [
+    "last 3 Chrome versions"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extends",
+            "tailwind",
+            "responsive"
+          ]
+        }
+      ],
+      "block-no-empty": null,
+      "unit-whitelist": [
+        "em",
+        "rem",
+        "s",
+        "ch",
+        "%"
+      ],
+      "font-family-no-missing-generic-family-keyword": null
+    }
+  },
+  "dependencies": {
+    "@thi.ng/api": "^6.2.0",
+    "@thi.ng/hdom": "^7.2.8",
+    "@thi.ng/hdom-components": "^3.0.20",
+    "@thi.ng/interceptors": "^2.0.12",
+    "@thi.ng/router": "^1.0.12",
+    "@thi.ng/transducers": "^5.3.7"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.0",
+    "esm": "^3.2.25",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "stylelint-config-recommended": "^2.2.0",
+    "tailwindcss": "^1.0.4",
+    "tailwindcss-grid": "^1.2.1",
+    "typescript": "^3.5.2"
+  }
+}

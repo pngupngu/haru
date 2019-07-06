@@ -1,0 +1,10 @@
+@tailwind base;
+
+@import './fonts.css';
+
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* @apply bg-green; */
+}
