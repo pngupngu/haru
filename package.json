@@ -33,6 +33,8 @@
         "rem",
         "s",
         "ch",
+        "vh",
+        "vw",
         "%"
       ],
       "font-family-no-missing-generic-family-keyword": null
@@ -43,6 +45,7 @@
     "@thi.ng/hdom": "^7.2.8",
     "@thi.ng/hdom-components": "^3.0.20",
     "@thi.ng/interceptors": "^2.0.12",
+    "@thi.ng/math": "^1.3.0",
     "@thi.ng/router": "^1.0.12",
     "@thi.ng/transducers": "^5.3.7"
   },

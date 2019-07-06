@@ -6,5 +6,46 @@
 @tailwind utilities;
 
 html {
-  /* @apply bg-green; */
+  background-color: hsl(0,0%,95%);
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  bottom: 30%;
+}
+
+.content {
+  padding-top: 200vh;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-teal {
+  background-color: aqua;
+}
+
+.post {
+  margin-bottom: 100vh;
+}
+
+.post:last-child {
+  margin-bottom: 50vh;
 }

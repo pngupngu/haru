@@ -7,6 +7,7 @@ export type ViewSpec = string | [string, ViewTransform<any>];
 
 export interface Views {
   route: RouteMatch;
+  bgOpacity: number;
 }
 
 export interface Context {
@@ -18,10 +19,8 @@ export interface Context {
 export enum EVENTS {
   INIT = 'init',
   ROUTE_TO = 'route-to',
-
-  GESTURE = 'gesture',
 }
 
 export enum EFFECTS {
-  ROUTE_TO
+  ROUTE_TO,
 }
